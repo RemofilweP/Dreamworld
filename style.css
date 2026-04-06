@@ -11,6 +11,11 @@ body {
   height: auto;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 /* NAVBAR */
 #header {
   display: fixed content/center;
@@ -87,6 +92,26 @@ button:hover {
 
 .hero-text button:hover {
   background: #333;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Phone */
+@media (max-width: 600px) {
+    .products {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* PRODUCTS */
@@ -583,4 +608,18 @@ body{
   .cart-page-header h1 {
     font-size: 32px;
   }
+}
+
+/* Default styles (Desktop first) */
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: center;
+    }
 }
