@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product - YamSwag</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<section id="header">
+    <a href="index.html"><img src="DreamWorld/DreamLogo.png" class="logo" alt="logo"> </a>
+    <div >
+        <ul id="navbar">
+            <li> <a href="index.html">Home</a> </li>
+            <li> <a class="active" href="shop.html">Shop</a> </li>
+            <li> <a href="contact.html">Contact</a> </li>
+            <li> <a href="cart.html">Cart(<span id="cart-count">0</span>)</a> </li> <!--come back to insert cart icon when you have power tee-->
+        </ul>
+    </div>
+</section>
+
+<section id="product-details" class="section-p1">
+    <div class="product-image">
+        <img id="product-img" src="" alt="">
+    </div>
+
+    <div class="product-info">
+        <h2 id="product-name"></h2>
+        <h3 id="product-price"></h3>
+
+        <p id="product-description"></p>
+        <select id="size"></select>
+
+        <button onclick="addProductToCart()">Add to Cart</button>
+    </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DREAMWORLD</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://googleapis.com" rel="stylesheet">
+
+</head>
+
+<body>
+    <section id="header">
+        <a href="#"><img src="DreamWorld/DreamLogo.png" class="logo" alt="logo"> </a>
+
+
+        <div >
+            <ul id="navbar">
+                <li> <a class="active" href="index.html">Home</a> </li>
+                <li> <a href="shop.html">Shop</a> </li>
+                <li> <a href="contact.html">Contact</a> </li>
+                <li> <a href="cart.html">Cart(<span id="cart-count">0</span>)</a> </li> <!--come back to insert cart icon when you have power tee-->
+            </ul>
+        </div>
+    </section>
+
+    <section id="hero">
+        <div class="hero-text">
+            <h1>DREAMWORLD</h1>
+            <p>Premium Streetwear Collection</p>
+            <button onclick="window.location.href='shop.html'">Shop Now</button>
+        </div>
+    </section>
+
+    <section class="featured">
+    <h2>Featured Drops</h2>
+
+    <div class="product-container">
+        <div class="product-container" id="product-list">
+        </div>
+    </div>
+    </section>
+    
+    <script src="script.js"> </script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DREAMWORLD</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <section id="header">
+        <a href="index.html"><img src="DreamWorld/DreamLogo.png" class="logo" alt="logo"> </a>
+
+        <div >
+            <ul id="navbar">
+                <li> <a href="index.html">Home</a> </li>
+                <li> <a href="shop.html">Shop</a> </li>
+                <li> <a href="contact.html">Contact</a> </li>
+                <li><a class="active" href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="cart-page" class="section-p1">
+        <div class="cart-page-header">
+            <p class="cart-eyebrow">Your Bag</p>
+            <h1>Shopping Cart</h1>
+            <p class="cart-subtext">Review your items before checkout.</p>
+        </div>
+
+        <div class="cart-layout">
+        <div class="cart-items-panel">
+            <div id="cart-items" class="cart-items-list"></div>
+            <div id="empty-cart" class="empty-cart" style="display: none;">
+            <h3>Your cart is empty</h3>
+            <p>Looks like you haven’t added anything yet.</p>
+            <a href="shop.html" class="premium-link-btn">Continue Shopping</a>
+            </div>
+        </div>
+
+        <aside class="cart-summary-panel">
+            <div class="summary-card">
+            <h3>Order Summary</h3>
+
+            <div class="summary-row">
+                <span>Subtotal</span>
+                <span id="summary-subtotal">R0</span>
+            </div>
+
+            <div class="summary-row">
+                <span>Delivery</span>
+                <span id="summary-delivery">Calculated at checkout</span>
+            </div>
+
+            <div class="summary-row total-row">
+                <span>Total</span>
+                <span id="summary-total">R0</span>
+            </div>
+
+            <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+            <a href="shop.html" class="continue-shopping">Continue Shopping</a>
+            </div>
+        </aside>
+        </div>
+    </section>
+
+    
+    <script src="script.js"> </script>
+</body>
+
+</html>
