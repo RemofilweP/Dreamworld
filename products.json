@@ -3,7 +3,7 @@
     "id": 1,
     "name": "Dream Wool",
     "price": 699,
-    "image": "dreamworld/products/DreamWool.png",
+    "image": "DreamWorld/Products/DreamWool.png",
     "description": "Premium black Woolen hat",
     "sizes": ["XS","S", "M", "L", "XL", "XXL"]
   },
@@ -11,7 +11,7 @@
     "id": 2,
     "name": "Clear Vision Tee",
     "price": 199,
-    "image": "dreamworld/products/Clear Vision Tee.png",
+    "image": "DreamWorld/Products/Clear Vision Tee.png",
     "description": "Comfortable oversized t-shirt",
     "sizes": ["XS","S", "M", "L", "XL", "XXL"]
   },
@@ -19,7 +19,7 @@
     "id": 3,
     "name": "DW Baseball Jacket",
     "price": 399,
-    "image": "dreamworld/products/DW Baseball Jacket.png",
+    "image": "DreamWorld/Products/DW Baseball Jacket.png",
     "description": "Comfortable oversized hoodie",
     "sizes": ["XS","S", "M", "L", "XL", "XXL"]
   },
@@ -27,7 +27,7 @@
     "id": 4,
     "name": "Dreamers Tee",
     "price": 399,
-    "image": "dreamworld/products/Dreamers Tee.png",
+    "image": "DreamWorld/Products/Dreamers Tee.png",
     "description": "Comfortable oversized hoodie",
     "sizes": ["XS","S", "M", "L", "XL", "XXL"]
   }
