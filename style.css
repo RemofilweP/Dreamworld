@@ -54,10 +54,7 @@ button:hover {
 /* HERO */
 #hero {
   height: 100vh;
-  background-image: url("DreamWorld/pic1.png");
-  background-size: cover;
-  background-position: right;
-  background-repeat: no-repeat;
+  background: url("DreamWorld/pic1.png") right center / cover no-repeat;
   background-size: cover;
   background-color: #000000;
   top: 100px;
