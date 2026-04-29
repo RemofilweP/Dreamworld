@@ -26,33 +26,73 @@ function checkout() {
     alert("Next step: Payment integration 🔥");
 }
 
-
+let allProducts = [];
 
 async function loadProducts() {
-    const response = await fetch("products.json");
-    const products = await response.json();
+  const container = document.getElementById("product-list");
+  const filterSelect = document.getElementById("product-filter");
 
-    const container = document.getElementById("product-list");
+  if (!container) return;
 
-    if (!container) return;
+  const response = await fetch("products.json");
+  const products = await response.json();
 
-    container.innerHTML = "";
+  allProducts = products;
 
-    products.forEach(product => {
-        container.innerHTML += `
-            <div class="product" onclick="viewProduct(${product.id})">
-                <img src="${product.image}" alt="">
-                <h5>${product.name}</h5>
-                <h4>R${product.price}</h4>
-                <button onclick="viewProduct(${product.id})">
-                    View Product
-                </button>
-            </div>
-        `;
+  renderProducts(allProducts);
+  populateProductFilter(allProducts);
+
+  if (filterSelect) {
+    filterSelect.addEventListener("change", function () {
+      const selectedType = this.value;
+
+      if (selectedType === "All") {
+        renderProducts(allProducts);
+      } else {
+        const filteredProducts = allProducts.filter(
+          product => product.type === selectedType
+        );
+        renderProducts(filteredProducts);
+      }
     });
+  }
 }
 
-loadProducts();
+function renderProducts(products) {
+  const container = document.getElementById("product-list");
+  if (!container) return;
+
+  container.innerHTML = "";
+
+  if (products.length === 0) {
+    container.innerHTML = `<p>No products found in this category.</p>`;
+    return;
+  }
+
+  products.forEach(product => {
+    container.innerHTML += `
+      <div class="product" onclick="viewProduct(${product.id})">
+        <img src="${product.image}" alt="${product.name}">
+        <h5>${product.name}</h5>
+        <h4>R${product.price}</h4>
+        <button onclick="event.stopPropagation(); viewProduct(${product.id})">
+          View Product
+        </button>
+      </div>
+    `;
+  });
+}
+
+function populateProductFilter(products) {
+  const filterSelect = document.getElementById("product-filter");
+  if (!filterSelect) return;
+
+  const uniqueTypes = [...new Set(products.map(product => product.type).filter(Boolean))];
+
+  uniqueTypes.forEach(type => {
+    filterSelect.innerHTML += `<option value="${type}">${type}</option>`;
+  });
+}
 
 async function viewProduct(id) {
     const response = await fetch("products.json");
@@ -93,7 +133,7 @@ function loadProduct() {
     });
   }
 }
-loadProduct()
+
 
 function addProductToCart() {
   const product = JSON.parse(localStorage.getItem("selectedProduct"));
@@ -242,6 +282,9 @@ function checkout() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+  loadProducts();
+  loadProduct();
   loadCartPage();
   updateCartCount();
 });
+
