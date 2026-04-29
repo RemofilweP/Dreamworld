@@ -933,40 +933,43 @@ body {
 
 /* Mobile styles */
 @media (max-width: 768px) {
+  #header {
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    height: 80px;
+    padding: 10px 20px;
+  }
+
+  #header > a {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo {
+    width: 130px;
+  }
 
   #mobile {
-    display: block;
-    font-size: 24px;
-    cursor: pointer;
+    display: flex !important;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 18px;
   }
 
-  #navbar {
-    position: fixed;
-    top: 0;
-    right: -300px;
-    height: 100vh;
-    width: 260px;
-    background: white;
+  #mobile i {
+    font-size: 28px;
+  }
+
+  .cart-link {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 80px 20px;
-    gap: 20px;
-    transition: right 0.3s ease;
-    box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+    align-items: center;
+    position: relative;
   }
 
-  #navbar.active {
-    right: 0;
-  }
-
-  #navbar li {
-    width: 100%;
-  }
-
-  #navbar li a {
-    font-size: 18px;
-    width: 100%;
-    display: block;
+  .cart-count,
+  #cart-count {
+    font-size: 22px;
+    margin: 0 4px;
   }
 }
