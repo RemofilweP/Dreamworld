@@ -154,24 +154,49 @@ p {
 ========================= */
 
 #hero {
+  position: relative;
   height: calc(100vh - 90px);
-  background: url("DreamWorld/pic1.png") right center / cover no-repeat;
-  background-color: #000;
+  overflow: hidden;
   display: flex;
   align-items: center;
   padding: 0 80px;
 }
 
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Optional dark overlay (makes text readable) */
+#hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: -1;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+
 .hero-text h1 {
-  font-size: 60px;
-  color: #163328;
-  margin: 0;
+  color: white;
 }
 
 .hero-text p {
-  font-size: 18px;
-  color: #163328;
-  margin: 15px 0;
+  color: #ddd;
 }
 
 .hero-text button {
