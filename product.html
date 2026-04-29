@@ -11,19 +11,30 @@
 <body>
 
 <section id="header">
-    <a href="index.html"><img src="DreamWorld/DreamLogo.png" class="logo" alt="logo"> </a>
-    <div >
-        <ul id="navbar">
-            <li> <a href="index.html">Home</a> </li>
-            <li> <a class="active" href="shop.html">Shop</a> </li>
-            <li> <a href="contact.html">Contact</a> </li>
-             <li> <a href="cart.html" class="cart-link">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <span class="cart-count" id="cart-count">0</span>
-                    </a>
-            </li>
-        </ul>
+    <a href="index.html">
+        <img src="DreamWorld/DreamLogo.png" class="logo" alt="logo"> 
+    </a>
+    
+    <!-- Burger icon -->
+    <div id="mobile">
+        <a href="cart.html" class="cart-link">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span id="cart-count">0</span>
+        </a>
+        <i id="bar" class="fa-solid fa-bars"></i>
     </div>
+
+    <!-- Navigation -->
+    <ul id="navbar">
+        <li> <a href="index.html">Home</a> </li>
+        <li> <a class="active" href="shop.html">Shop</a> </li>
+        <li> <a href="contact.html">Contact</a> </li>
+        <li> <a href="cart.html" class="cart-link">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="cart-count" id="cart-count">0</span>
+            </a>
+        </li>
+    </ul>
 </section>
 
 <section id="product-details" class="section-p1">
