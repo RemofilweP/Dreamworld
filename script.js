@@ -281,6 +281,21 @@ function checkout() {
   alert("Next step: checkout and payment integration.");
 }
 
+const bar = document.getElementById("bar");
+const nav = document.getElementById("navbar");
+
+if (bar) {
+  bar.addEventListener("click", () => {
+    nav.classList.toggle("active");
+  });
+}
+
+document.querySelectorAll("#navbar a").forEach(link => {
+  link.addEventListener("click", () => {
+    nav.classList.remove("active");
+  });
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   loadProducts();
   loadProduct();
