@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>Product - YamSwag</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -16,7 +17,11 @@
             <li> <a href="index.html">Home</a> </li>
             <li> <a class="active" href="shop.html">Shop</a> </li>
             <li> <a href="contact.html">Contact</a> </li>
-            <li> <a href="cart.html">Cart(<span id="cart-count">0</span>)</a> </li> <!--come back to insert cart icon when you have power tee-->
+             <li> <a href="cart.html" class="cart-link">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                    </a>
+            </li>
         </ul>
     </div>
 </section>

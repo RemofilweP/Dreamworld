@@ -596,6 +596,29 @@ body{
   }
 }
 
+.cart-link {
+  position: relative;
+  font-size: 20px;
+  color: #111;
+  text-decoration: none;
+}
+
+.cart-link i {
+  font-size: 20px;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: black;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-weight: 600;
+}
+
 /* Default styles (Desktop first) */
 .nav {
     display: flex;
