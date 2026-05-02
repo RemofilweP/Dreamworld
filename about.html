@@ -1,20 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DREAMWORLD</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - DreamWorld</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
-    <section id="header">
-        <a href="index.html">
+
+  <section id="header">
+        <a href="#">
             <img src="DreamWorld/DreamLogo.png" class="logo" alt="logo"> 
         </a>
 
@@ -32,7 +29,7 @@
             <li> <a href="index.html">Home</a> </li>
             <li> <a href="shop.html">Shop</a> </li>
             <li> <a href="contact.html">Contact</a> </li>
-            <li> <a href="about.html">About Us</a> </li>
+            <li> <a class="active" href="about.html">About Us</a> </li>
             <li> <a href="cart.html" class="cart-link">
                 <i class="fa-solid fa-cart-shopping"></i>
                 <span class="cart-count" id="cart-count">0</span>
@@ -41,50 +38,63 @@
         </ul>
     </section>
 
-    <section id="cart-page" class="section-p1">
-        <div class="cart-page-header">
-            <p class="cart-eyebrow">Your Bag</p>
-            <h1>Shopping Cart</h1>
-            <p class="cart-subtext">Review your items before checkout.</p>
-        </div>
+  <section id="about-hero" class="section-p1">
+    <p class="cart-eyebrow">About DreamWorld</p>
+    <h1>Built for Dreamers</h1>
+    <p>
+      The brand is built on the idea that wealth starts in the mind before it shows in lifestyle. “Dreamworld” symbolizes limitless imagination, while “Billionaires” represents elevated thinking, confidence, and success.
+    </p>
+  </section>
 
-        <div class="cart-layout">
-        <div class="cart-items-panel">
-            <div id="cart-items" class="cart-items-list"></div>
-            <div id="empty-cart" class="empty-cart" style="display: none;">
-            <h3>Your cart is empty</h3>
-            <p>Looks like you haven’t added anything yet.</p>
-            <a href="shop.html" class="premium-link-btn">Continue Shopping</a>
-            </div>
-        </div>
+  <section  class="about-section section-p1">
+    <h2>Famous Quote</h2>
+    <p>
+      Destiny isn’t something you wait for. it is something you step into.
+    </p>
+  </section>
 
-        <aside class="cart-summary-panel">
-            <div class="summary-card">
-            <h3>Order Summary</h3>
+  <section class="about-section section-p1">
+    <h2>Brand Description</h2>
+    <p>
+      We focus on modern streetwear essentials — hoodies, tees, jackets, and statement pieces
+      made for people who want their clothing to say something without trying too hard.
+    </p>
+  </section>
 
-            <div class="summary-row">
-                <span>Subtotal</span>
-                <span id="summary-subtotal">R0</span>
-            </div>
+  <section class="reviews-section section-p1">
+    <h2>Customer Reviews</h2>
 
-            <div class="summary-row">
-                <span>Delivery</span>
-                <span id="summary-delivery">Calculated at checkout</span>
-            </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <p>“Great quality and the hoodie feels premium.”</p>
+        <h4>— Customer Review</h4>
+      </div>
 
-            <div class="summary-row total-row">
-                <span>Total</span>
-                <span id="summary-total">R0</span>
-            </div>
+      <div class="review-card">
+        <p>“The fit is clean and the design stands out.”</p>
+        <h4>— Customer Review</h4>
+      </div>
 
-            <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
-            <a href="shop.html" class="continue-shopping">Continue Shopping</a>
-            </div>
-        </aside>
-        </div>
-    </section>
+      <div class="review-card">
+        <p>“Fast service and really comfortable material.”</p>
+        <h4>— Customer Review</h4>
+      </div>
+    </div>
+  </section>
 
-    <footer id="footer">
+  <section class="about-section section-p1">
+    <h2>Return Policy</h2>
+    <p>
+      Items may be returned within 7 days of delivery if they are unworn, unwashed,
+      and in their original condition. Customers are responsible for return shipping
+      unless the item received was damaged or incorrect.
+    </p>
+    <p>
+      To request a return, contact us at <strong> Dreamworldoperations@gmail.com</strong>.
+    </p>
+  </section>
+
+  <footer id="footer">
 
         <div class="footer-container">
             <!-- Brand -->
@@ -127,8 +137,6 @@
 
     </footer>
 
-    
-    <script src="script.js"> </script>
+  <script src="script.js"></script>
 </body>
-
 </html>
